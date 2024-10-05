@@ -11,27 +11,27 @@ const userSchema = new mongoose.Schema({
     },
     wallet_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'wallets',
+        ref: 'Wallet',
     },
     orders: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'orders',
+        ref: 'Order',
     }],
     favourites: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'favourites',
+        ref: 'Favourite',
     }]
     , feedbacks: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'favourites',
+        ref: 'Feedback',
     }],
     history: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'histories',
+        ref: 'History',
     }],
     offers: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'offers',
+        ref: 'Offer',
     }]
 })
 
