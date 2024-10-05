@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-let port = 8080;
+let port = 2;
 
 const Chat = require("./models/chat.js");
 
@@ -26,6 +26,12 @@ let chat1 = new Chat({
     to: "hi",
 });
 
+
+
+app.get('/', (req, res) => {
+
+    res.render()
+})
 
 chat1.save().then(res => {
     console.log(res);
