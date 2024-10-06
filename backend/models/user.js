@@ -25,10 +25,6 @@ const userSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Feedback',
     }],
-    history: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'History',
-    }],
     offers: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Offer',

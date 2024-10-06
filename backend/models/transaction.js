@@ -4,24 +4,25 @@ const transactionSchema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref:'User',
+        ref: 'User',
     },
     amount: {
         type: Number,
-        required:true,
+        required: true,
     },
     order_id: {
         type: mongoose.Schema.Types.ObjectId,
-        required:true,
-        ref:'Order',
+        required: true,
+        ref: 'Order',
     },
-    status:{
-        type:String,
-        required:true,
+    status: {
+        type: Boolean,
+        required: true,
+        default: false,
     },
-    transaction_type:{
-        type:String,
-        required:true,
+    transaction_type: {
+        type: String,
+        required: true,
     }
 })
 

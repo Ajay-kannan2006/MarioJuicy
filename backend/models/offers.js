@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
 
 const offersSchema = new mongoose.Schema({
-    discount_percentage:{
-        type:Number,
-        required:true,
+    discount_percentage: {
+        type: Number,
+        required: true,
     },
-    valid_untill:{
-        type:Date,
-        required:true,
+    valid_until: {
+        type: Date,
+        required: true,
     },
 });
 

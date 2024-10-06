@@ -4,15 +4,17 @@ const feedbackSchema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        ref:'User',
+        ref: 'User',
     },
-    feedback:{
-        type:String,
-        required:true,
+    feedback: {
+        type: String,
+        required: true,
     },
-    rating:{
-        type:Number,
-        required:true,
+    rating: {
+        type: Number,
+        required: true,
+        min: 1,
+        max: 5,
     },
 });
 
