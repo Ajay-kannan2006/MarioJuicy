@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Filters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .dropdown-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 3 dropdowns + 1 button */
+            gap: 15px;
+            width: 100%;
+            max-width: 1200px; /* Adjust based on your layout needs */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .dropdown {
+            position: relative;
+            display: flex;
+        }
+        select {
+            padding: 15px;
+            width: 100%;
+            font-size: 16px;
+            border: 2px solid #ff3b6a;
+            border-radius: 5px;
+            background-color: white;
+            color: #333;
+            appearance: none;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #ff0055;
+        }
+
+        .dropdown::after {
+            content: '▼';
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #555;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #ff3b6a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff0055;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+        select option {
+            color: #333; /* Default text color */
+        }
+
+        select option:nth-child(0):hover {
+            background-color: #ff0055; /* Change text color on hover */
+        }
+
+        /* Avoiding the blue background by resetting styles */
+        select:focus {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown-container" name="dropdown-container" id="dropdown-container">
+    <div class="dropdown" id="dcategory">
+        <select id="category">
+            <option value="">Category</option>
+            <option value="drinks" id="op">Drinks</option>
+            <option value="snacks" id="op">Snacks</option>
+            <option value="meals" id="op">Meals</option>
+        </select>
+    </div>
+
+    <div class="dropdown" id="doffers">
+        <select id="type-of-offer">
+            <option value="">Type of Offer</option>
+            <option value="discount">Discount</option>
+            <option value="cashback">Cashback</option>
+            <option value="buy1get1">Buy 1 Get 1</option>
+        </select>
+    </div>
+
+    <div class="dropdown" id="dprice">
+        <select id="price-list">
+            <option value="">Price List</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+        </select>
+    </div>
+
+    <button id="applyBtn">Apply</button>
+</div>
+
+<script>
+    document.getElementById('applyBtn').addEventListener('click', function() {
+        const category = document.getElementById('category').value;
+        const offerType = document.getElementById('type-of-offer').value;
+        const priceList = document.getElementById('price-list').value;
+
+        console.log(`Category: ${category}, Offer Type: ${offerType}, Price List: ${priceList}`);
+    });
+</script> 
+
+</body>
+</html>
