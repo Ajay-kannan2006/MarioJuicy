@@ -9,8 +9,6 @@ body {
     background-color: #f9f9f9;
 }
   
-/* about-container */
-
 .about-container {
     display: flex;
     align-items: center;
@@ -108,90 +106,5 @@ body {
     .about-text-section h2 {
         margin-top: 20px;
         font-size: 1.8em; 
-    }
-}
-
-/* offers container */
-.offers-container {
-    background-color: white;
-    padding: 20px;
-    margin: 50px 0;
-}
-
-.offers-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-}
-
-.offers-list li {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    height: 350px;
-    margin: 10px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-
-.offers-list img {
-    width: 300px;
-    height: 267px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.offers-list h3 {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #e53935;
-}
-
-.offers-list p {
-    margin: 10px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.offers-list button {
-    background-color: #e53935;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.offers-list button:hover {
-    background-color: #d32f2f;
-}
-
-@media (max-width: 768px) {
-    .offers-list {
-        flex-direction: column;
-        align-items: center;
-    }
-    .offers-list li {
-        width: 90%;
-        margin-bottom: 20px;
     }
 }
