@@ -1,0 +1,142 @@
+body{
+    height:100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+}
+.history_container{
+    height:70%;
+    width: 80%;
+    background-color: white;
+    box-shadow: 4px 4px 4px 4px rgba(128, 128, 128, 0.542);
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    
+}
+.history_content{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 5%;
+      margin-top: 3%;
+}
+.title{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 50%;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.title h2{
+    color: blue;
+}
+.title button{
+    width:20%;
+    height:60%;
+    border: none;
+    background-color: #FA1041;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.284);
+
+
+}
+.data_history{
+    width:80%;
+    height: 30%;
+    box-shadow: 1px 1px 4px grey;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3px;
+}
+.data_history_img{
+    width: 35%;
+    height: 90%;
+}
+.data_history_img img{
+    width: 100%;
+    height: 100%;
+}
+.data_history_content{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height:0.001px;
+    flex-shrink:0;
+    flex-wrap:nowrap;
+}
+.data_history_content h3{
+    color: #FA1041;
+}
+.data_history_content p span{
+    color: #FA1041;
+}
+.data_history_content p{
+    background-color: rgba(0, 0, 0, 0.316);
+}
+.history_image{
+    width: 50%;
+    height: 100%;
+}
+.history_image img{
+    width: 85%;
+    height: 90%;
+}
+@media screen and (max-width: 1080px) {
+    .history_image {
+        display: none;
+    }
+    .history_content{
+        width: 100%;
+
+    }
+    .title{
+        column-gap: 40%;
+    }
+    .data_history{
+        width: 90%;
+        height: 40%;
+    }
+    .data_history_content{
+        flex-wrap: wrap;
+        height: 100%;
+    }
+}
+@media  screen and (max-width:500px) {
+    .data_history{
+        display: flex;
+        flex-direction: column;
+        height: 70%;
+        align-items: center;
+        justify-content: center;
+    }
+    .data_history_img{
+        width: 80%;
+        height: 40%;
+        
+    }
+    .data_history_img img{
+        width: 90%;
+        height: 80%;
+    }
+    .data_history_content{
+        width: 100%;
+        height: 60%;
+        align-items: center;
+        justify-content: center;
+    }
+    .title button{
+        width: 50%;
+    }
+    .title{
+        column-gap: 10%;
+    }
+}
