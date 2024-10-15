@@ -1,17 +1,13 @@
 import './card.css';
 import card_img from './card2.jpeg';
 
-  let item_name="choco";
-  let item_quantity=10;
-  let item_price=10;
-  
 
-function Card() {
+function Card({ item_name, item_quantity, item_price }) {
   return (
     <div className="cart">
-      <div className="image_cart" style={{backgroundImage:`url(${card_img})`}}></div>
+      <div className="image_cart" style={{ backgroundImage: `url(${card_img})` }}></div>
       <div className="cart_content">
-        <h4 style={{ color: '#FA1041' }}>{item_name} Ice Cream</h4>
+        <h4 style={{ color: '#FA1041' }}>{item_name}</h4>
         <div className="quantity" style={{ color: '#037014' }}>
           <h4>Quantity:</h4>
           <p id="Chocolate_ice_cream_quantity" style={{ color: '#037014' }}>{item_quantity}</p>
