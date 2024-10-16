@@ -1,6 +1,4 @@
-/* body{
-    height: 100vh;
-} */
+
 .cart{
     margin:10px 10px;
     display: flex;
@@ -9,13 +7,10 @@
     width: 300px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.511);
     border-radius: 10px;
-    
-    /* flex-shrink: unset; */
 }
 .image_cart{
     height: 300px;
     width: 100%;
-    /* background-image: url("card2.jpeg"); */
     background-position:bottom;
     background-size: cover;
     
