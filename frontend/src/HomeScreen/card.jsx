@@ -1,5 +1,5 @@
 import './card.css';
-import card_img from './card2.jpeg';
+import card_img from '../assets/card2.jpeg';
 
 function Card({ item_name, item_quantity, item_price }) {
   return (

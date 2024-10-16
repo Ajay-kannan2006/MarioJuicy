@@ -1,5 +1,5 @@
 import './HomeScreenOffers.css';
-import bread_img from './bread.jpg';
+import bread_img from '../assets/bread.jpg';
 
 function OfferCard()
 {

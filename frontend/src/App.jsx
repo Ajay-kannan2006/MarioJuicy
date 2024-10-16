@@ -1,6 +1,6 @@
 import './App.css'
-import Card from './card'
-import Filter_bar from './Filter_bar'
+import Card from './HomeScreen/card'
+import Filter_bar from './FoodMenuScreen/Filter_bar'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
