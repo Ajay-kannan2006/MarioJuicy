@@ -1,17 +1,13 @@
 import './App.css'
 import Card from './card'
-import Filter_bar from './Filter_bar'
-import './App.css';
-import Card from './card';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import HomeScreenOffers from './HomeScreenOffers'
 function App() {
   const [items, setItem] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api")
+    axios.get("http://localhost:8080/home")
       .then((res) => {
         setItem(res.data);
       })
@@ -21,21 +17,9 @@ function App() {
   }, []);
   return (
     <div className='cards'>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Filter_bar />
-      {/* <p>{items[0].item_name}</p> */}
       {items.map((item, index) => (
-        <Card key={index} item_name={item.item_name} item_quantity={item.item_quantity} item_price={item.item_price} />
+        <Card key={index} item_name={item.item} item_quantity={item.availablequantity} item_price={item.price} />
       ))}
-      <Card/>
-      <Card/>
-      <Card/>
-      <Card/>
-      <Filter_bar/>
-      <HomeScreenOffers/>
     </div>
   )
 }
