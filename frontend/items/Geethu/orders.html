@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1900px;
+            max-height: 900px;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px 0px #00000040;
+            padding: 20px;
+            position: relative;
+            gap: 20px;
+        }
+
+        .order-section {
+            flex: 1;
+        }
+
+        .order-section h2{
+            color: #2539EC;
+        }
+
+        .order-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px 0px #00000040;
+            padding: 20px;
+            margin-top: 30px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .order-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .shake-details {
+            display: flex;
+        }
+
+        .shake-img {
+            width: 80px;
+            height: 70px;
+            margin-right: 20px;
+        }
+
+        .shake-info {
+            display: flex;
+            flex-direction: column;
+            line-height: 30px;
+            align-items: flex-start;
+        }
+
+        .shake-info h3{
+            color: #FA1041;
+        }
+
+        .shake-info span{
+            color: #FA1041E5;
+            font-weight: 700;
+        }
+
+        .qr-code {
+            width: 100px;
+            height: auto;
+        }
+
+        .text-style-history{
+            font-size: 18px;
+            font-weight: 700;
+            color: #0000009E;
+        }
+
+        .cancel-btn {
+            background: #FA1041;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .cancel-btn:hover {
+            background-color: #fe4a08;
+        }
+
+        .user-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustration-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .history-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #FA1041;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .history-btn:hover {
+            background-color: #fe4a08;
+        }
+
+        @media (max-width: 960px) {
+            .user-section {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="order-section">
+            <h2>ORDER'S</h2>
+            <div class="order-card">
+                <div class="order-info">
+                    <div class="shake-details">
+                        <img src="./images/milk-shake.png" alt="Milkshake" class="shake-img">
+                        <div class="shake-info">
+                            <h3>Milk Shake Type's</h3>
+                            <p>Rose Milk and Paatham Milk</p>
+                            <p>Total = <span>₹120</span></p>
+                        </div>
+                    </div>
+                    <img src="./images/qr_code.png" alt="QR Code" class="qr-code">
+                </div>
+                <div class="text-style-history">
+                    <p>Date: 10-09-2024</p>
+                    <p>Time: 6 hr Remaining</p>
+                </div>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <img src="./images/history_image.png" alt="User Illustration" class="illustration-img">
+        </div>
+        
+        <button class="history-btn">History</button>
+    </div>
+
+    <script>
+        document.querySelector('.cancel-btn').addEventListener('click', function() {
+            alert('Order cancelled!');
+        });
+    </script>
+</body>
+</html>
