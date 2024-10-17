@@ -21,7 +21,7 @@ function Footer() {
 
     return (
         <div className='footerDiv'>
-            <footer className="footer_bar">
+            <div className="footer_bar">
                 <div className="footer_left_side">
                     <img className="footer-leftside-image" src={`${new_footer_image1}`} alt="footer-leftside-image" />
                 </div>
@@ -51,10 +51,17 @@ function Footer() {
                             ))}
                             <button className="footer_submit_button">Submit</button>
                         </div>
+<<<<<<< HEAD
 
+=======
+                       
+>>>>>>> 3eb7b4d31c8288a296710128a2ad0e282b87b9a7
                     </div>
                 </div>
-            </footer>
+            </div>
+            <h3 style={{
+                color: '#FA1041',margin:'10px'
+            }}>@mario juicy ,Sri Eshwar College Of Engineering Coimbatore</h3>
         </div>
     );
 }
