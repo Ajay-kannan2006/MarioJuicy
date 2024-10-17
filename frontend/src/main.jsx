@@ -6,7 +6,7 @@ import St from './componentsSt.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App/>
-    <St/>
-   </StrictMode>,
+    <App />
+    {/* <St /> */}
+  </StrictMode>,
 )

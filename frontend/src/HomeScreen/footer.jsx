@@ -4,19 +4,19 @@ import footer_rightside_image from '../assets/footer_rightside_image.png'
 import new_footer_image1 from '../assets/new_footer_image1.png'
 
 function Footer() {
-    const [rating, setRating] = useState(0); 
-    const [hoverRating, setHoverRating] = useState(0); 
+    const [rating, setRating] = useState(0);
+    const [hoverRating, setHoverRating] = useState(0);
 
     const handleStarClick = (ratingValue) => {
-        setRating(ratingValue); 
+        setRating(ratingValue);
     };
 
     const handleStarHover = (ratingValue) => {
-        setHoverRating(ratingValue); 
+        setHoverRating(ratingValue);
     };
 
     const handleStarMouseOut = () => {
-        setHoverRating(0); 
+        setHoverRating(0);
     };
 
     return (
@@ -42,7 +42,7 @@ function Footer() {
                                     onMouseOut={handleStarMouseOut}
                                     style={{
                                         cursor: 'pointer',
-                                        color: (hoverRating || rating) >= star ? '#FFD700' : '#dcdcdc', 
+                                        color: (hoverRating || rating) >= star ? '#FFD700' : '#dcdcdc',
                                         fontSize: '2em'
                                     }}
                                 >
@@ -51,7 +51,7 @@ function Footer() {
                             ))}
                             <button className="footer_submit_button">Submit</button>
                         </div>
-                        
+
                     </div>
                 </div>
             </footer>
