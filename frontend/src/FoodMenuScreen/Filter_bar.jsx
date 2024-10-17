@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Filter_bar.css';
-
 function Filter_bar() {
   const [category, setCategory] = useState('');
   const [offerType, setOfferType] = useState('');
@@ -12,7 +11,7 @@ function Filter_bar() {
   };
 
   return (
-    <div>
+    <div className='filter'>
       <div className="dropdown-container" name="dropdown-container" id="dropdown-container">
         <div className="dropdown" id="dcategory">
           <select id="category" value={category} onChange={(e) => setCategory(e.target.value)}>

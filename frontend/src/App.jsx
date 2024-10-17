@@ -21,7 +21,6 @@ function App() {
       {items.map((item, index) => (
         <Card key={index} item_name={item.item} item_quantity={item.availablequantity} item_price={item.price} />
       ))}
-      <Footer />
     </div>
   )
 }
