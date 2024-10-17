@@ -1,5 +1,4 @@
 import './App.css'
-import Card from './card'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
