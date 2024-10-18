@@ -4,6 +4,7 @@ import Filter_bar from "./FoodMenuScreen/Filter_bar"
 import Footer from "./HomeScreen/footer"
 import FoodCategory from "./HomeScreen/foodCategory"
 import Signup from "./SignUp"
+import Login from "./login"
 function St() {
     return (
         <div >
@@ -18,7 +19,7 @@ function St() {
             <Footer />
             <FoodCategory />
             <Signup />
-
+            <Login/>
         </div>
     )
 }
