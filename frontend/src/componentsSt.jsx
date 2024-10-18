@@ -5,6 +5,7 @@ import Footer from "./HomeScreen/footer"
 import FoodCategory from "./HomeScreen/foodCategory"
 import Signup from "./SignUp"
 import Login from "./login"
+import About from "./about"
 function St() {
     return (
         <div >
@@ -20,6 +21,7 @@ function St() {
             <FoodCategory />
             <Signup />
             <Login/>
+            <About/>
         </div>
     )
 }
