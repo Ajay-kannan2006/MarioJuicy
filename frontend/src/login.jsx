@@ -3,6 +3,7 @@ import loginimage from './assets/login_image.png';
 
 function Login() {
     return (
+        
         <div className="login">
             <div className="login_image">
                 <img src={loginimage} alt="Login" />

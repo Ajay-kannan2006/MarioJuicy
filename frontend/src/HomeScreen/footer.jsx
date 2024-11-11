@@ -20,8 +20,8 @@ function Footer() {
     };
 
     return (
-        <div className='footerDiv'>
-            <footer className="footer_bar">
+        // <div className='footerDiv'>
+            <div className="footer_bar">
                 <div className="footer_left_side">
                     <img className="footer-leftside-image" src={`${new_footer_image1}`} alt="footer-leftside-image" />
                 </div>
@@ -52,8 +52,8 @@ function Footer() {
                             <button className="footer_submit_button">Submit</button>
                         </div>
                     </div>
-                </div>
-            </footer>
+                {/* </div> */}
+            </div>
         </div>
     );
 }

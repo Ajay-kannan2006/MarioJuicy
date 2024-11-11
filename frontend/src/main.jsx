@@ -9,9 +9,9 @@ import MenuBar from './Components/MenuBar.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    {/* <St /> */}
-    {/* <Ajay /> */}
-    <MenuBar />
+    {/* <App />  */}
+     <St /> 
+     {/* <Ajay /> */}
+    {/* <MenuBar /> */}
   </StrictMode>,
 )
