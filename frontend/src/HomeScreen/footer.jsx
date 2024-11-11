@@ -30,7 +30,7 @@ function Footer() {
                     <img src={`${footer_rightside_image}`} alt="mario_shop_image" />
                     <div className="footer_right_side_content">
                         <h1>Feedback</h1>
-                        <input type="email" name="email" id="footer_email" placeholder="Enter your email id" />
+                        <input type="email" name="email" id="footer_email" placeholder="Enter your email id" autoComplete='email' />
                         <textarea name="feedback" id="footer_feedback" rows="8" cols="43" placeholder="Give the feedback!"></textarea>
 
                         <div className="footer_feedback_star">
@@ -51,7 +51,6 @@ function Footer() {
                             ))}
                             <button className="footer_submit_button">Submit</button>
                         </div>
-
                     </div>
                 </div>
             </footer>
