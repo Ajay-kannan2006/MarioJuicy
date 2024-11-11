@@ -1,7 +1,8 @@
 import './App.css'
-import Card from './card'
+import Card from './HomeScreen/card'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Footer from './HomeScreen/footer';
 
 function App() {
   const [items, setItem] = useState([]);

@@ -2,16 +2,26 @@ import Card from "./HomeScreen/card"
 import HomeScreenOffers from "./HomeScreen/HomeScreenOffers"
 import Filter_bar from "./FoodMenuScreen/Filter_bar"
 import Footer from "./HomeScreen/footer"
-function St(){
+import FoodCategory from "./HomeScreen/foodCategory"
+import Signup from "./SignUp"
+import Login from "./login"
+import About from "./about"
+function St() {
     return (
-        <div className="cards">
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <HomeScreenOffers/>
-            <Filter_bar/>
-            <Footer/>
+        <div >
+            <div className="cards">
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>
+            <HomeScreenOffers />
+            <Filter_bar />
+            <Footer />
+            <FoodCategory />
+            <Signup />
+            <Login/>
+            <About/>
         </div>
     )
 }
