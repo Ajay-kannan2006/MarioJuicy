@@ -30,6 +30,17 @@ async function main() {
 }
 
 async function initializeMoreData() {
+    await Promise.all([
+        User.deleteMany(),
+        Wallet.deleteMany(),
+        Transaction.deleteMany(),
+        Order.deleteMany(),
+        Offer.deleteMany(),
+        Feedback.deleteMany(),
+        Favourite.deleteMany(),
+        Cart.deleteMany(),
+        Item.deleteMany(),
+    ])
     const users = [
         {
             name: "John",
@@ -165,9 +176,10 @@ async function initializeMoreData() {
         const offer = new Offer({
             discount_percentage: userData.discountPercentage,
             valid_until: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+            item_id: orderItem._id,
         });
 
-        user.offers.push(offer._id);
+        // user.offers.push(offer._id);
 
         const cart = new Cart({
             user_id: user._id,

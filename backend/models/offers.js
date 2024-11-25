@@ -9,6 +9,7 @@ const offersSchema = new mongoose.Schema({
         type: Date,
         required: true,
     },
+    item_id: mongoose.Schema.Types.ObjectId,
 });
 
 const Offer = mongoose.model("Offer", offersSchema);
