@@ -20,7 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #c13b3b;
+            background-color: #FA1041;
             padding: 15px 30px;
             color: white;
         }
@@ -124,6 +124,26 @@
         .profile span {
             font-weight: bold;
         }
+
+        .location img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .favorites-heart{
+            background-color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+        }
+
+        .favorites-heart img{
+            margin-top:2px;
+            margin-left: 3px;
+            width: 20px;
+            height: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -131,7 +151,7 @@
         <div class="navbar-left">
             <img src="images/mario-logo.png" alt="Mario Juicy Logo" class="logo">
             <span class="brand-name">MARIO JUICY</span>
-            <span class="location">📍 Sri Eshwar College, Coimbatore</span>
+            <span class="location"><img src="images/navigation-img.png" alt=""> Sri Eshwar College, Coimbatore</span>
         </div>
         
         <div class="navbar-center">
@@ -140,7 +160,7 @@
         </div>
 
         <div class="navbar-right">
-            <button class="wishlist-btn">❤️<span class="notification">1</span></button>
+            <div class="favorites-heart"><button class="wishlist-btn"><img src="images/heart.png" alt="heart-img"><span class="notification">1</span></button></div>
             <div class="profile">
                 <span>MARIO ADMIN</span>
                 <img src="images/profile.png" alt="Profile" class="profile-img">
