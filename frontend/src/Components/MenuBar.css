@@ -1,9 +1,56 @@
 .menu-bar {
-    height: 10vh;
+    height: 60px;
+    width: 100%;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.62);
 }
 
 .cart {
-    font-size: 1.5rem;
-    
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content: center;
 }
+
+.cart p:hover {
+    cursor: pointer;
+}
+
+.nav-bar {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+    min-width: 500px;
+}
+
+.nav-buttons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.nav-buttons:hover {
+    cursor: grab;
+    border-color: black;
+    color: rgba(250, 16, 65, 1);
+}
+
+/* 
+@media (max-width:630px) {
+    .nav-buttons {
+        display: none;
+        min-width: none;
+    }
+} */

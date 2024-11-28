@@ -1,22 +1,26 @@
 import './card.css';
 import card_img from '../assets/card2.jpeg';
 
-function Card({ item_name, item_quantity, item_price }) {
+function Card({ item_name, item_quantity, item_price, item_img }) {
+  console.log(item_img);
   return (
-    <div className="cart">
-      <div className="image_cart" style={{ backgroundImage: `url(${card_img})` }}></div>
-      <div className="cart_content">
-        <h4 style={{ color: '#FA1041' }}>{item_name}</h4>
-        <div className="quantity" style={{ color: '#037014' }}>
-          <h4>Quantity:</h4>
-          <p id="Chocolate_ice_cream_quantity" style={{ color: '#037014' }}>{item_quantity}</p>
-        </div>
-        <div className="cart_footer">
-          <button>Add Cart</button>
-          <p>Price: ${item_price}</p>
+    <>
+      {/* <img src={item_img} alt={item_name} style={{ width: '100%', height: 'auto' }} /> */}
+      <div className="card">
+        <div className="image_card" style={{ backgroundImage: `url(${item_img})` }}></div>
+        <div className="card_content">
+          <h4 style={{ color: '#FA1041' }}>{item_name}</h4>
+          <div className="quantity" style={{ color: '#037014' }}>
+            <h4>Quantity:</h4>
+            <p id="Chocolate_ice_cream_quantity" style={{ color: '#037014' }}>{item_quantity}</p>
+          </div>
+          <div className="card_footer">
+            <button>Add Cart</button>
+            <p>Price: ${item_price}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
