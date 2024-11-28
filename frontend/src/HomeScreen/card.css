@@ -58,6 +58,7 @@
 .card_footer button {
     padding: 0px 30px;
     margin-left: 10px;
+    height: 75%;
     background-color: #FA1041;
     border: none;
     border-radius: 5px;
@@ -80,4 +81,30 @@
     justify-content: space-evenly;
     width: 100%;
     max-width: none;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #FA1041;
+    /* Matches the theme */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+.small-spinner {
+    width: 15px;
+    height: 15px;
+    border-width: 3px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
