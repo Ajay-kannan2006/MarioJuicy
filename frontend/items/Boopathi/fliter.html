@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fliter.css">
+</head>
+<body>
+    <div class="filder_area">
+        <select name="category" id="category" class="category" onchange="filterProducts()">
+            <option value="">Category</option>
+            <option value="Juice">Juice</option>
+            <option value="Shake">Shake</option>
+            <option value="Hot-Drinks">Hot-Drinks</option>
+            <option value="Ice cream">Ice cream</option>
+            <option value="Fast-food">Fast-food</option>
+        </select>
+        <select name="offer_type" id="offer_type" class="offer_type">
+            <option value="">Offer Type</option>
+            <option value="Buy-1-Get-1">Buy 1 Get 1</option>
+            <option value="Normal-Offer">Normal Offer</option>
+        </select>
+        <select name="price_list" id="price_list">
+            <option value="">Price List</option>
+            <option value="70">70 above</option>
+            <option value="50">50 above</option>
+            <option value="30">30 above</option>
+        </select>
+        <button type="submit" class="apply">Apply</button>
+    </div>
+    <div class="itemList">
+
+    </div>
+</body>
+<script>
+    const items=[
+        {
+            path:"image4.png",
+            name:"chicken rice",
+            category:"Fast-food",
+            quanity:10,
+            price:20
+
+        },
+        {
+            path:"image4.png",
+            name:"egg rice",
+            category:"Fast-food",
+            quanity:10,
+            price:20
+
+        },
+        {
+            path:"image4.png",
+            name:"chicken noodles",
+            category:"Fast-food",
+            quanity:10,
+            price:20
+
+        },
+        {
+            path:"image4.png",
+            name:"milk shake",
+            category:"Shake",
+            quanity:10,
+            price:20
+
+        },
+        {
+            path:"image4.png",
+            name:"rose milk shake",
+            category:"Shake",
+            quanity:10,
+            price:20
+
+        },
+        {
+            path:"image4.png",
+            name:"patham milk shake",
+            category:"Shake",
+            quanity:10,
+            price:20
+
+        },
+    ];
+
+</script>
+</html>

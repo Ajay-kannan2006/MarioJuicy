@@ -8,6 +8,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
 }
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 1f740dd11f6c87f8b543235e945c3df2373ee7b5
 .about-container {
     display: flex;
     align-items: center;
@@ -106,4 +110,8 @@ body {
         margin-top: 20px;
         font-size: 1.8em; 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1f740dd11f6c87f8b543235e945c3df2373ee7b5

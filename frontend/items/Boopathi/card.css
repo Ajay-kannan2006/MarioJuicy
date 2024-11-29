@@ -6,8 +6,8 @@ body {
     margin: 10px 20px;
     display: flex;
     flex-direction: column;
-    height: 50%;
-    width: 23%;
+    height: 55%;
+    width: 21%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.511);
     border-radius: 10px;
 }
@@ -15,8 +15,13 @@ body {
 .image_cart {
     height: 50%;
     width: 100%;
+<<<<<<< HEAD
     background-image: url("image1.png");
     background-position: center;
+=======
+    background-image: url("cart1.png");
+    background-position:center;
+>>>>>>> 13ecbae65b1fb020dcedfea125e18492bd18560f
     background-size: cover;
     border-radius: 10px 10px 0px 0px;
 
