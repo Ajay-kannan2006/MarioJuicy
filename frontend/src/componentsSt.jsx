@@ -20,8 +20,8 @@ function St() {
             <Footer />
             <FoodCategory />
             <Signup />
-            <Login/>
-            <About/>
+            <Login />
+            <About />
         </div>
     )
 }

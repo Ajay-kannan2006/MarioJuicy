@@ -17,6 +17,7 @@ import Footer from './HomeScreen/footer';
 import Offer from './HomeScreen/offers_card';
 import './HomeScreen/HomeScreenOffers.css';
 import HomeOffer from './HomeScreen/HomeScreenOffers'
+import MenuBar from './Components/MenuBar';
 
 function App() {
   const [items, setItem] = useState([]);
@@ -66,7 +67,9 @@ function App() {
             item_name={item.item}
             item_quantity={item.availablequantity}
             item_price={item.price}
+            item_img={item.imageUrl}
           />
+
         ))}
       </div>
 
@@ -77,11 +80,13 @@ function App() {
               key={index}
               item_name={offer.item}
               price={offer.price - (offer.price * (offer.discount_percentage / 100))}
+              item_img={offer.imageUrl}
             />
           ))
         }
       </div>
       <Footer />
+      <MenuBar />
     </>
   );
 >>>>>>> 1f740dd11f6c87f8b543235e945c3df2373ee7b5

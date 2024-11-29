@@ -72,7 +72,7 @@
 
 }
 
-.footer_right_side_content input {
+.footer_right_side_content form input {
     width: 80%;
     height: 10%;
     display: flex;
@@ -81,11 +81,12 @@
     text-align: start;
 }
 
-.footer_right_side_content textarea {
+.footer_right_side_content form textarea {
     border: 1px solid #FA1041;
-    padding: 2px 2px;
+    padding: 1px 2px;
     border-radius: 5px;
     margin-right: 10px;
+    margin-top: 10px;
     overflow: hidden;
     display: flex;
 }
@@ -105,7 +106,7 @@
     color: #FA1041;
 }
 
-.footer_feedback_star button {
+.footer_submit_button {
     margin-left: 20px;
     padding: 7px 30px;
     border: none;
@@ -115,4 +116,5 @@
     font-weight: bold;
     display: flex;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.378);
+    z-index: 10;
 }
