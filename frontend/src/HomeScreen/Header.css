@@ -1,0 +1,133 @@
+.header {
+    height: 60px;
+    background-color: #FA1041;
+    display: flex;
+    align-items: center;
+
+}
+
+*:hover {
+    cursor: default;
+}
+
+.header-left {
+    height: 100%;
+    width: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.mario-logo {
+    height: 40px;
+    width: 40px;
+    background-image: url("./images/mario-logo.png");
+}
+
+.mario-text {
+    height: 40px;
+    width: 250px;
+    /* background-color: blue; */
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: bold;
+    color: white;
+}
+
+.mario-location {
+    height: 40px;
+    width: 200px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: end;
+}
+
+.location-text {
+    font-size: smaller;
+}
+
+.header-center {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    height: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.search-icon {
+    color: black;
+    position: relative;
+    left: 90%;
+}
+
+.header-right {
+    display: flex;
+    width: 32%;
+    justify-content: space-around;
+    align-items: center
+}
+
+.heart {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: white;
+    color: #FA1041;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart:hover {
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 210px;
+
+}
+
+.user-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    /* background-color: blue; */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.user-name {
+    height: 40px;
+    width: 150px;
+    /* background-color: blue; */
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.user-name:hover {
+    cursor: pointer;
+}

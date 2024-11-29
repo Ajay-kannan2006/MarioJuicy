@@ -7,6 +7,7 @@ import Offer from './HomeScreen/offers_card';
 import './HomeScreen/HomeScreenOffers.css';
 import HomeOffer from './HomeScreen/HomeScreenOffers'
 import MenuBar from './Components/MenuBar';
+import Header from './HomeScreen/Header';
 
 function App() {
   const [items, setItem] = useState([]);
@@ -25,6 +26,8 @@ function App() {
 
   return (
     <>
+      <Header />
+      <MenuBar />
       <div className='cards'>
         {items.map((item, index) => (
           <Card
@@ -51,7 +54,7 @@ function App() {
         }
       </div>
       <Footer />
-      <MenuBar />
+
     </>
   );
 }

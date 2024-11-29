@@ -9,7 +9,7 @@ export default function MenuBar() {
                 <div className="nav-buttons">MY-ORDER'S</div>
                 <div className="nav-buttons">FEEDBACK</div>
             </div>
-            <div className="cart"><p><i class="fa-solid fa-cart-shopping fa-xl" style={{ color: "#FA1041", }}></i>&nbsp;&nbsp;&nbsp;&nbsp;CART</p></div>
+            <div className="cart"><p><i className="fa-solid fa-cart-shopping fa-xl" style={{ color: "#FA1041", }}></i>&nbsp;&nbsp;&nbsp;&nbsp;CART</p></div>
         </div>
     );
 }

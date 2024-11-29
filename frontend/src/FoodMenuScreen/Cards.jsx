@@ -1,4 +1,4 @@
-import './layout.css'
+// import './layout.css'
 import Card from '../HomeScreen/card'
 export default function Cards() {
     return (
