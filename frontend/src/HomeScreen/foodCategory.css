@@ -1,0 +1,52 @@
+.h2 {
+    color: #FA1041;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+    width: 100%; 
+    padding: 20px;
+    white-space: nowrap; 
+    box-sizing: border-box;
+    scrollbar-width: none; 
+}
+
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    -ms-overflow-style: none; 
+}
+
+.div {
+    flex: 0 0 180px; 
+    display: inline-block; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    width: 170px;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.p {
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+}

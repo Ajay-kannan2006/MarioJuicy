@@ -1,0 +1,9 @@
+.menu-bar {
+    height: 10vh;
+    display: flex;
+}
+
+.cart {
+    font-size: 1.5rem;
+    
+}
