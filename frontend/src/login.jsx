@@ -24,7 +24,7 @@ function Login() {
                 localStorage.setItem("token", response.data.token);
                 showAlert("Login Successful!","success");
                 setTimeout(()=>{
-                    navigate('/');
+                    navigate('/home');
                 },3000);
                 
             }
