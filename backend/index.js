@@ -188,6 +188,21 @@ app.post("/login", async (req, res) => {
 });
 
 
+app.get("/offers",async(req,res)=>{
+    try{
+        var items=await Item.find();
+        if(items){
+            return res.status(200).json({message:"success",offer:items});
+        }
+        return res.status(201).json({message:"unsuccess",offer:null});
+    }
+    catch(e){
+        console.log("inside catch block");
+        res.status(500).json({message:"unsuccess",offer:null});
+
+    }
+})
+
 app.listen(process.env.port, () => {
     console.log(`Listening on port ${process.env.port}`);
 });

@@ -16,7 +16,8 @@ const itemsSchema = new mongoose.Schema({
     availablequantity: {
         type: Number,
         required: true,
-    }, imageUrl: { type: String },
+    }, 
+    imageUrl: { type: String },
 });
 
 const Item = mongoose.model("Item", itemsSchema);
