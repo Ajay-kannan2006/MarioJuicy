@@ -1,12 +1,11 @@
 import Header from './HomeScreen/Header'
-import NavBar from './nav'
 import HomeScreenOffers from './HomeScreen/HomeScreenOffers'
+import NavBar from './nav'
 const Home=()=>{
     return (
         <div>
             <Header/>
             <NavBar/>
-            <HomeScreenOffers/>
         </div>
         
         

@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+.banner {
+    width: 96%;
+    background-color: #FFEAEF;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-img {
+    width: 350px;
+    height: auto;
+}
+
+.text-content {
+    flex-grow: 1;
+    padding: 0 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.buy {
+    color: blue;
+}
+
+.get {
+    color: red;
+}
+
+.offer {
+    color: green;
+}
+
+.description {
+    font-size: 23px;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 0;
+}
+
+.order-btn {
+    background-color: #FA1041;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.order-btn:hover {
+    background-color: rgb(223, 21, 21);
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .banner-img {
+        width: 20%;
+        max-width: 300px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    .description {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-img {
+        display: none;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .description {
+        font-size: 18px;
+    }
+    .order-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-img {
+        width: 80%;
+        max-width: 200px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .order-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
