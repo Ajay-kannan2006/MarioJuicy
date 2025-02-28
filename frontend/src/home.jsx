@@ -3,9 +3,10 @@ import NavBar from './nav'
 const Home=()=>{
     return (
         <div>
-            <Header/>,
+            <Header/>
             <NavBar/>
         </div>
+        
         
     )
 }
