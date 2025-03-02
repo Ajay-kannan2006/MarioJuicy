@@ -5,6 +5,7 @@ import burgerImg from "./images/burger.png";
 
 const Banner = () => {
   return (
+    <div className="body">
     <div className="banner">
       <img src={juiceImg} alt="Orange Juice" className="banner-img" />
       <div className="text-content">
@@ -19,6 +20,7 @@ const Banner = () => {
         <a href="#" className="order-btn">ORDER NOW</a>
       </div>
       <img src={burgerImg} alt="Burger" className="banner-img" />
+    </div>
     </div>
   );
 };

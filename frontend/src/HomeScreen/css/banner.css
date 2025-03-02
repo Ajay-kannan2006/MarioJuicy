@@ -1,8 +1,9 @@
-body {
+.body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f8f8f8;
+    background-color: #d60202;
+    font-family: "Inter", serif;
     margin: 0;
 }
 

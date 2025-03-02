@@ -34,15 +34,20 @@
     min-width: 500px;
 }
 
-.nav-buttons {
+.nav-buttons a {
     display: flex;
     height: 100%;
     align-items: center;
+    text-decoration: none;
+    color:rgb(78, 74, 74);
     /* border: 2px solid black; */
 }
 
-.nav-buttons:hover {
-    cursor: grab;
+.nav-buttons a:hover {
+    border-color: black;
+    color: rgba(250, 16, 65, 1);
+}
+.nav-buttons a:focus {
     border-color: black;
     color: rgba(250, 16, 65, 1);
 }
