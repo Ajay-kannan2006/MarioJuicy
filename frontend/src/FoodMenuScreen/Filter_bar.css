@@ -1,8 +1,11 @@
 
+.filter{
+    display: flex;
+}
 .dropdown-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 4%;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -10,8 +13,8 @@
 
 .dropdown {
     position: relative;
-    width: 350px;
     display: flex;
+    width: 25%;
 }
 select {
     padding: 15px;

@@ -9,25 +9,30 @@ const Feedback = require("./models/feedback.js");
 const Favourite = require("./models/favourites.js");
 const Cart = require("./models/cart.js");
 const Item = require("./models/item.js");
+const dotenv=require("dotenv")
+const bcrypt=require("bcrypt")
 
 const app = express();
-const port = 3000; // Update port as needed
-
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+dotenv.config();
+app.listen(process.env.port, () => {
+    console.log(`Listening on port ${process.env.port}`);
 });
 
 // Connect to MongoDB
 async function main() {
-    await mongoose.connect('mongodb+srv://ajaykannan1001200635:ajay@cluster0.vgqca.mongodb.net/Mario?retryWrites=true&w=majority&appName=Cluster0');
-    console.log("Connection successful");
+    await mongoose.connect(process.env.MONGO_URL).then(()=>{
+        console.log("connected successfully")
+    }).catch((err)=>{
+        console.log(err)
+    })
 }
 
 // Initialize the database with one user and related data
 async function initialize() {
     const user = new User({
-        name: "Ajay",
-        email: "ajay@gmail.com",
+        name: "Ajay001",
+        email: "ajaykk@gmail.com",
+        password:"12345"
     });
 
     await user.save(); // Save the user first to get the user ID
@@ -36,7 +41,7 @@ async function initialize() {
         user_id: user._id,
         balance: 100,
         lastUpdated: new Date(),
-    });
+    }); 
 
     user.wallet_id = wallet._id; // Link wallet to user
 
@@ -69,7 +74,6 @@ async function initialize() {
     });
 
     user.favourites.push(favourite._id); // Link favourite to user
-
     const feedback = new Feedback({
         user_id: user._id,
         feedback: "Good service",
