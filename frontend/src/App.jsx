@@ -1,5 +1,5 @@
 import './App.css';
-import Card from './HomeScreen/card';
+import Card from './HomeScreen/Card';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Footer from './HomeScreen/footer';

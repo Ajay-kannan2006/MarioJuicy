@@ -8,6 +8,7 @@ import Footer from './HomeScreen/footer'
 import OfferCard from './HomeScreen/offers_card'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Card from './HomeScreen/Card'
 const Home = () => {
     const [items, setItem] = useState([]);
     const [offers, setOffers] = useState([]);

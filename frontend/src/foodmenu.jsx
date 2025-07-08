@@ -4,6 +4,7 @@ import Banner from "./HomeScreen/Banner"
 import Header from "./HomeScreen/Header"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Card from "./HomeScreen/Card"
 
 const FoodMenu=()=>{
     const [items, setItem] = useState([]);

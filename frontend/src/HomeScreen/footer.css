@@ -23,7 +23,8 @@
 
 .footer_left_side img {
     width: 70%;
-    height: 150%;
+    height: 100%;
+    /* zoom: 5%; */
 }
 
 .footer_right_side {
@@ -36,6 +37,8 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    padding-top: 0px;
+    padding-bottom:0px ;
 }
 
 .footer_right_side img {
