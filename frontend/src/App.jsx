@@ -12,9 +12,9 @@ import Header from './HomeScreen/Header';
 function App() {
   const [items, setItem] = useState([]);
   const [offers, setOffers] = useState([]);
-
+   
   useEffect(() => {
-    axios.get("http://localhost:8080/home")
+    axios.get("http://localhost:3000/home")
       .then((res) => {
         setItem(res.data.items);
         setOffers(res.data.offers);
@@ -37,7 +37,6 @@ function App() {
             item_price={item.price}
             item_img={item.imageUrl}
           />
-
         ))}
       </div>
 

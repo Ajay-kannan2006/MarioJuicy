@@ -37,7 +37,7 @@ function Footer() {
         e.preventDefault();
         console.log("Submit button clicked");
         try {
-            const response = await fetch('http://localhost:8080/feedback', {
+            const response = await fetch('http://localhost:3000/feedback', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

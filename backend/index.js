@@ -1,32 +1,12 @@
-<<<<<<< HEAD
-const express = require("express");
-const app = express();
-const cors = require("cors");
-
-app.use(cors())
-
-
-const users = {
-    id: 21, name: "Ajay",
-}
-
-app.listen(8080, () => {
-    console.log("connected");
-})
-
-
-app.get('/api', (req, res) => {
-    const num = req.params.num;
-    res.json(users);
-})
-=======
 let express = require("express");
 let app = express();
 let cors = require("cors");
 let mongoose = require("mongoose");
 app.use(cors());
+//cors - cross origin referential site
+
 app.use(express.json())
-let port = 8080;
+let port = 3000;
 let Item = require('./models/item');
 let Offer = require('./models/offers');
 let Feedback = require('./models/feedback');
@@ -97,5 +77,4 @@ app.post("/feedback", async (req, res) => {
 // app.get('/home', (req, res) => {
 //     let details = [{ item: "banana juice", availablequantity: 20, price: 20 }, { item: "orange juice", availablequantity: 20, price: 20 }, { item: "apple juice", availablequantity: 20, price: 20 }];
 //     res.json(details);
-// })
->>>>>>> 1f740dd11f6c87f8b543235e945c3df2373ee7b5
+// })>>>>>>> 1f740dd11f6c87f8b543235e945c3df2373ee7b5

@@ -11,7 +11,7 @@ const Cart = require("./models/cart.js");
 const Item = require("./models/item.js");
 
 const app = express();
-const port = 8080; // Update port as needed
+const port = 3000; // Update port as needed
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

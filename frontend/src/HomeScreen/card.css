@@ -9,7 +9,7 @@
     padding: 0px;
 }
 
-.image_card {
+.image-card {
     height: 200px;
     width: 100%;
     background-position: bottom;
@@ -19,12 +19,12 @@
 
 }
 
-.image_card img {
+.image-card img {
     height: 100%;
     width: 100%;
 }
 
-.card_content {
+.card-content {
     /* overflow: hidden; */
     margin: 10px;
     height: 50%;
@@ -33,7 +33,7 @@
     flex-direction: column;
 }
 
-.card_content h4 {
+.card-content h4 {
     margin: 2px;
     font-size: 19px;
 }
@@ -47,7 +47,7 @@
 
 }
 
-.card_footer {
+.card-footer {
     width: 95%;
     display: flex;
     flex-direction: row;
@@ -56,7 +56,7 @@
     padding-top: 15px;
 }
 
-.card_footer button {
+.card-footer button {
     padding: 0px 30px;
     margin-left: 10px;
     height: 75%;
@@ -69,7 +69,7 @@
 
 }
 
-.card_footer p {
+.card-footer p {
     font-size: 19px;
     font-weight: bold;
     color: #FA1041;
@@ -83,6 +83,10 @@
     width: 100%;
     max-width: none;
     /* flex-wrap: wrap; */
+}
+
+.card-button:hover {
+    cursor: pointer;
 }
 
 .spinner {
@@ -108,5 +112,92 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.add {
+    width: 150px;
+    height: 50px;
+    background-color: #FA1041;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: white;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add:hover {
+    background-color: #e00c39;
+    transform: scale(1.05);
+}
+
+.increment {
+    display: none;
+    /* Initially hidden */
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.increment i {
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    background-color: #FA1041;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.increment i:hover {
+    background-color: #e00c39;
+}
+
+.increment i:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.increment i:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.increment p {
+    width: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    border: 1px solid #FA1041;
+    border-left: none;
+    border-right: none;
+}
+
+@media (max-width: 600px) {
+    .add {
+        width: 90%;
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .increment i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .increment p {
+        width: 40px;
+        font-size: 1.2rem;
+        height: 40px;
+        line-height: 40px;
     }
 }
