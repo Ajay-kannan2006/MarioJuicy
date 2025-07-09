@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import './Filter_bar.css';
-function Filter_bar() {
-  const [category, setCategory] = useState('');
-  const [offerType, setOfferType] = useState('');
-  const [priceList, setPriceList] = useState('');
-
-
+function Filter_bar({ category, setCategory, offerType, setOfferType, priceList, setPriceList }) {
+  
   const handleApply = () => {
     console.log(`Category: ${category}, Offer Type: ${offerType}, Price List: ${priceList}`);
   };
@@ -33,9 +29,9 @@ function Filter_bar() {
 
         <div className="dropdown" id="dprice">
           <select id="price-list" value={priceList} onChange={(e) => setPriceList(e.target.value)}>
-            <option value="">Price List</option>
-            <option value="low">Low to High</option>
-            <option value="high">High to Low</option>
+            <option value={-1}>Price List</option>
+            <option value={0}>Low to High</option>
+            <option value={1}>High to Low</option>
           </select>
         </div>
 

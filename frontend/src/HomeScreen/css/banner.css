@@ -64,6 +64,8 @@ h1 {
     font-weight: bold;
     display: inline-block;
     margin-top: 15px;
+    border-width: 0px;
+    cursor: pointer;
 }
 
 .order-btn:hover {

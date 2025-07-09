@@ -23,40 +23,38 @@ const Home = () => {
             });
     }, []);
     return (
-        <div>
-            <Header />
-            <NavBar />
-            <Banner />
-            <div className='offer-section'>
-                {
-                    offers.map((offer, index) => (
-                        <OfferCard
-                            key={index}
-                            item_name={offer.item}
-                            price={offer.price - (offer.price * (offer.discount_percentage / 100))}
-                            item_img={offer.imageUrl}
-                        />
-                    ))
-                }
-            </div>
-            <About />
-            <div className='cards'>
-                {items.map((item, index) => (
-                    <Card
-                        key={index}
-                        item_name={item.item}
-                        item_quantity={item.availablequantity}
-                        item_price={item.price}
-                        item_img={item.imageUrl}
-                    />
+      <div>
+        <Header />
+        <NavBar />
+        <Banner />
 
-                ))}
-            </div>
-            <FoodCategory />
-            <Footer />
+        <About />
+        <div className="offer-section">
+          {offers.map((offer, index) => (
+            <OfferCard
+              key={index}
+              item_name={offer.item}
+              price={
+                offer.price - offer.price * (offer.discount_percentage / 100)
+              }
+              item_img={offer.imageUrl}
+            />
+          ))}
         </div>
-
-
-    )
+        {/* <div className="cards">
+          {items.map((item, index) => (
+            <Card
+              key={index}
+              item_name={item.item}
+              item_quantity={item.availablequantity}
+              item_price={item.price}
+              item_img={item.imageUrl}
+            />
+          ))}
+        </div> */}
+        {/* <FoodCategory /> */}
+        <Footer />
+      </div>
+    );
 }
 export default Home
