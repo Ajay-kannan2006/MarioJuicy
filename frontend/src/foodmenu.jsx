@@ -5,14 +5,16 @@ import Header from "./HomeScreen/Header"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Card from "./HomeScreen/Card"
-
+import './spinner.css';
 const FoodMenu=()=>{
     const [items, setItem] = useState([]);
     const [displayItems, setDisplayItems] = useState([]);
     const [category, setCategory] = useState("");
     const [offerType, setOfferType] = useState("");
     const [priceList, setPriceList] = useState(-1);
+    const [spinner,setSpinner]=useState(false);
     useEffect(() => {
+        setSpinner(true);
         axios.get("http://localhost:8080/home")
             .then((res) => {
                 setItem(res.data.items);
@@ -21,34 +23,28 @@ const FoodMenu=()=>{
                 console.log(err);
             });
     }, []);
-    
     useEffect(() => {
-        if (category === "" && offerType === "" && priceList === -1) {
-          
-        setDisplayItems(items);
-        return;
-      }
+        setSpinner(true);
+  let arr = [...items];
 
-      let arr;
-        if (category === "") {
-            arr = items;
-        }
-        else {
-            for (const item of items) {
-                if (item.category === category) {
-                    arr.push(item);
-                }
-            }
-        }
-        // let arr = items;
-      if (priceList === 0) {
-        arr.sort((a, b) => a.price - b.price);
-      } else {
-        arr.sort((a, b) => b.price - a.price);
-      }
+  if (category !== "") {
+    arr = arr.filter(item => item.category === category);
+  }
 
-      setDisplayItems(arr);
-    }, [category, priceList, offerType, items]);
+  if (offerType !== "") {
+    arr = arr.filter(item => item.offer === offerType);
+  }
+
+  if (priceList !== -1) {
+    arr.sort((a, b) => (priceList === 0 ? a.price - b.price : b.price - a.price));
+  }
+
+  setDisplayItems(arr);
+  setSpinner(false);
+
+  
+}, [category, priceList, offerType, items]);
+    
     
 
     return (
@@ -56,9 +52,9 @@ const FoodMenu=()=>{
         <Header/>
         <NavBar/>
         <Banner/>
-        <Filter_bar category={category} setCategory={setCategory} priceList={priceList} setPriceList={setPriceList} offerType={offerType} setOfferType={setOfferType}/>
+        <Filter_bar  setCategory={setCategory} setPriceList={setPriceList} setOfferType={setOfferType}/>
         <div className='cards'>
-                {displayItems.map((item, index) => (
+                {(!spinner)?displayItems.map((item, index) => (
                     <Card
                         key={index}
                         item_name={item.item}
@@ -67,7 +63,7 @@ const FoodMenu=()=>{
                         item_img={item.imageUrl}
                     />
 
-                ))}
+                )):(<div className="spinner"></div>)}
             </div>
         </>
         

@@ -9,6 +9,10 @@ const itemsSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    offer :{
+        type:String,
+        required:true
+    },
     category: {
         type: String,
         required: true,
