@@ -1,4 +1,3 @@
-import Card from "./HomeScreen/card"
 import HomeScreenOffers from "./HomeScreen/HomeScreenOffers"
 import Filter_bar from "./FoodMenuScreen/Filter_bar"
 import Footer from "./HomeScreen/footer"
@@ -6,6 +5,7 @@ import FoodCategory from "./HomeScreen/foodCategory"
 import Signup from "./SignUp"
 import Login from "./login"
 import About from "./about"
+import Card from "./HomeScreen/Card"
 function St() {
     return (
         <div >

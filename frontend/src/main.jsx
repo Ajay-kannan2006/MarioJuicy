@@ -14,17 +14,17 @@ import Home from './home.jsx'
 import FoodMenu from './foodmenu.jsx'
 import Myorders from './myorders.jsx'
 import Feedback from './Feedback.jsx'
-
+import PrivateRoute from './Components/privateRoute.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Signup />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/food_menu' element={<FoodMenu/>}></Route>
-        <Route path='/my_orders' element={<Myorders/>}></Route>
-        <Route path='/feedback' element={<Feedback />}></Route>
+        <Route path='/home' element={<PrivateRoute><Home /></PrivateRoute>}></Route>
+        <Route path='/food_menu' element={<PrivateRoute><FoodMenu/></PrivateRoute>}></Route>
+        <Route path='/my_orders' element={<PrivateRoute><Myorders/></PrivateRoute>}></Route>
+        <Route path='/feedback' element={<PrivateRoute><Feedback /></PrivateRoute>}></Route>
       </Routes>
     </BrowserRouter>
     {/* <App /> */}

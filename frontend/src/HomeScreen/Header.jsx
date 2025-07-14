@@ -1,7 +1,17 @@
 import './Header.css';
 import marioLogo from './images/mario-logo.png'
 import profileImg from './images/bread.jpg'
+import { useState } from 'react';
 export default function Header() {
+
+    const [showLogout, setShowLogout] = useState(false);
+    const handleToggle = () => {
+    setShowLogout(!showLogout);
+  };
+   const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login"; 
+  };
     return (
         <div className="header">
             <div className="header-left">
@@ -18,11 +28,17 @@ export default function Header() {
             </div>
             <div className="header-right">
                 <i class="fa-regular fa-heart fa-xl heart"></i>
-                <div className="user-info">
+                <div className="user-info-container">
+                <div className="user-info" onClick={handleToggle}>
                     <div className="user-logo"><i class="fa-regular fa-user fa-xl"></i></div>
                     <div className="user-name">MARIO ADMIN</div>
                 </div>
-
+                {showLogout && (
+                    <div className="logout-popup" onClick={handleLogout}>
+                        Logout
+                    </div>
+                )}
+                </div>
             </div>
         </div>
     );
