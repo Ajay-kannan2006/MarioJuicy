@@ -10,22 +10,50 @@
   display: inline-block;
 }
 
-.logout-popup {
+.logout-popup-container {
   position: absolute;
-  top: 100%; /* below the user-info div */
+  top: 110%; /* adjust as needed depending on trigger position */
   right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 100;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Individual option */
+.logout-popup {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333;
   background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px 15px;
   cursor: pointer;
-  z-index: 10;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  border-radius: 5px;
+  transition: background-color 0.2s, color 0.2s;
+  text-align: left;
 }
 
 .logout-popup:hover {
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
+  color: #000;
 }
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 .header-left {

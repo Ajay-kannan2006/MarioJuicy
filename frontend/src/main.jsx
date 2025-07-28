@@ -15,6 +15,7 @@ import FoodMenu from './foodmenu.jsx'
 import Myorders from './myorders.jsx'
 import Feedback from './Feedback.jsx'
 import PrivateRoute from './Components/privateRoute.jsx'
+import EditProfile from './HomeScreen/Edit-profile.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/login' element={<Login />}></Route>
         <Route path='/home' element={<PrivateRoute><Home /></PrivateRoute>}></Route>
         <Route path='/food_menu' element={<PrivateRoute><FoodMenu/></PrivateRoute>}></Route>
+        <Route path='/edit-profile' element={<PrivateRoute><EditProfile/></PrivateRoute>}></Route>
         <Route path='/my_orders' element={<PrivateRoute><Myorders/></PrivateRoute>}></Route>
         <Route path='/feedback' element={<PrivateRoute><Feedback /></PrivateRoute>}></Route>
       </Routes>

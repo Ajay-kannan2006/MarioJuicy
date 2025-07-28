@@ -34,10 +34,16 @@ export default function Header() {
                     <div className="user-name">MARIO ADMIN</div>
                 </div>
                 {showLogout && (
-                    <div className="logout-popup" onClick={handleLogout}>
-                        Logout
-                    </div>
-                )}
+  <div className="logout-popup-container">
+    <div className="logout-popup" onClick={() => window.location.href = "/edit-profile"}>
+      Edit Profile
+    </div>
+    <div className="logout-popup" onClick={handleLogout}>
+      Logout
+    </div>
+  </div>
+)}
+
                 </div>
             </div>
         </div>
